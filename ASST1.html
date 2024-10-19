@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add() {
+    let num1 = parseFloat(prompt("Enter first number:"));
+    let num2 = parseFloat(prompt("Enter second number:"));
+    let sum = num1 + num2;
+    alert(`Sum: ${sum}`);
+}
+
+
+function multiply() {
+    let num1 = parseFloat(prompt("Enter first number:"));
+    let num2 = parseFloat(prompt("Enter second number:"));
+    let product = num1 * num2;
+    alert(`Product: ${product}`);
+}
+
+
+function calculator() {
+    let choice;
+    do {
+        choice = parseInt(prompt("Menu\n1. Add\n2. Multiply\n3. Exit\nEnter your choice:"));
+        
+        switch (choice) {
+            case 1:
+                add();
+                break;
+            case 2:
+                multiply();
+                break;
+            case 3:
+                alert("Exiting calculator.");
+                break;
+            default:
+                alert("Invalid choice. Please choose again.");
+        }
+    } while (choice !== 3);
+}
+
+calculator();
+
+
+
+    </script>
+    
+</body>
+</html>
